@@ -1,0 +1,4 @@
+[client]
+user=prod_profiling
+host=vpc-profiling.cukhkd3vy9hv.us-east-1.rds.amazonaws.com
+

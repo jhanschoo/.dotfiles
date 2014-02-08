@@ -1,0 +1,4 @@
+[client]
+user=prd_reportdb_usr
+host=vpc-reports-rr1.cukhkd3vy9hv.us-east-1.rds.amazonaws.com
+port=3306

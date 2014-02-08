@@ -1,0 +1,11 @@
+[user]
+	name = Johannes Choo
+	email = jhanschoo@gmail.com
+[color]
+  ui = auto
+[core]
+	editor = gvim
+[merge]
+  tool = gvimdiff
+[push]
+	default = simple

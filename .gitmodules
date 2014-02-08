@@ -1,0 +1,6 @@
+[submodule ".vim"]
+	path = .vim
+	url = https://github.com/carlhuda/janus.git
+[submodule ".zprezto"]
+	path = .zprezto
+	url = https://github.com/sorin-ionescu/prezto.git

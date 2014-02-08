@@ -1,0 +1,26 @@
+" colorscheme setting
+colorscheme Tomorrow-Night
+"colorscheme molokai
+
+" use relative line numbers when not in insert mode
+set relativenumber
+autocmd InsertEnter * :setlocal rnu&
+autocmd InsertLeave * :setlocal rnu
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_wq=0
+
+" fortran 90/95 setting
+let fortran_free_source=1
+
+" xml and html indents
+"autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType sql setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType java setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4

@@ -1,0 +1,5 @@
+[client]
+user=eng_db_usr
+host=engineering.cukhkd3vy9hv.us-east-1.rds.amazonaws.com
+port=3306
+

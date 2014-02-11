@@ -1,5 +1,5 @@
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/jhanschoo/.gvm/bin/gvm-init.sh" ]] && source "/home/jhanschoo/.gvm/bin/gvm-init.sh"

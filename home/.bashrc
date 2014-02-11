@@ -113,8 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # virtualenvwrapper
 export PROJECT_HOME="$HOME/Devel"
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"

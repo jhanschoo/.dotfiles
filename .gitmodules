@@ -6,4 +6,4 @@
 	url = https://github.com/sorin-ionescu/prezto.git
 [submodule "home/.janus/vim-indent-guides"]
 	path = home/.janus/vim-indent-guides
-	url = git://github.com/nathanaelkane/vim-indent-guides.git
+	url = https://github.com/nathanaelkane/vim-indent-guides.git

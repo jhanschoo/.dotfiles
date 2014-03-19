@@ -121,4 +121,6 @@ export PROJECT_HOME="$HOME/Devel"
 [[ -s "/home/jhanschoo/.gvm/bin/gvm-init.sh" ]] && source "/home/jhanschoo/.gvm/bin/gvm-init.sh"
 
 # launch tmux
-tmux new
+tmux -u new
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

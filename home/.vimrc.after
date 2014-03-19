@@ -24,3 +24,9 @@ let fortran_free_source=1
 "autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sql setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType java setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" vim-indent-guides
+let g:indent_guides_guide_size = 1
+
+let g:indent_guides_enable_on_vim_startup = 0
+

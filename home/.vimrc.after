@@ -1,5 +1,5 @@
 " colorscheme setting
-colorscheme Tomorrow-Night
+colorscheme Tomorrow
 "colorscheme molokai
 
 " use relative line numbers when not in insert mode
@@ -24,6 +24,7 @@ let fortran_free_source=1
 "autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sql setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType java setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType c setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 " vim-indent-guides
 let g:indent_guides_guide_size = 1

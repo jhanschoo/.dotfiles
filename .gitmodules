@@ -3,7 +3,7 @@
 	url = https://github.com/carlhuda/janus.git
 [submodule ".zprezto"]
 	path = home/.zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
+	url = https://github.com/jhanschoo/prezto.git
 [submodule "home/.janus/vim-indent-guides"]
 	path = home/.janus/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git

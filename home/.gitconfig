@@ -5,7 +5,7 @@
   ui = auto
 [core]
 	editor = gvim
-	excludesfile = ~/.gitignore
+#	excludesfile = ~/.gitignore
 [merge]
   tool = gvimdiff
 [push]

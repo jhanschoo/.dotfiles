@@ -114,13 +114,5 @@ if ! shopt -oq posix; then
 fi
 
 # virtualenvwrapper
-export PROJECT_HOME="$HOME/Devel"
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/jhanschoo/.gvm/bin/gvm-init.sh" ]] && source "/home/jhanschoo/.gvm/bin/gvm-init.sh"
-
-# launch tmux
-tmux -u new
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

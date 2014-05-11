@@ -13,3 +13,6 @@
 [submodule "home/.rbenv"]
 	path = home/.rbenv
 	url = https://github.com/sstephenson/rbenv.git
+[submodule "home/.janus/emmet-vim"]
+	path = home/.janus/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

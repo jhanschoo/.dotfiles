@@ -7,3 +7,9 @@
 [submodule "home/.janus/vim-indent-guides"]
 	path = home/.janus/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "home/.janus/rust.vim"]
+	path = home/.janus/rust.vim
+	url = git@github.com:wting/rust.vim.git
+[submodule "home/.rbenv"]
+	path = home/.rbenv
+	url = https://github.com/sstephenson/rbenv.git

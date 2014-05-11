@@ -113,6 +113,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# virtualenvwrapper
-[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
-

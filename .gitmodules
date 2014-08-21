@@ -16,3 +16,6 @@
 [submodule "home/.janus/emmet-vim"]
 	path = home/.janus/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "home/.emacs.d"]
+	path = home/.emacs.d
+	url = git@github.com:bbatsov/prelude.git

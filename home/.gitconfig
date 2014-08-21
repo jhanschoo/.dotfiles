@@ -2,7 +2,7 @@
 	name = Johannes Choo
 	email = jhanschoo@gmail.com
 [color]
-  ui = auto
+	ui = true
 [core]
 	editor = gvim
 #	excludesfile = ~/.gitignore
@@ -12,3 +12,11 @@
 	default = simple
 [alias]
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	stash-unapply = !git stash show -p | git apply -R

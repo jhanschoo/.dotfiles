@@ -1,1 +1,0 @@
-("5.3.4" ("dfeaebe58c1781eda49f36b5e0dbf126c072c300" . "97190f7836b1031a99d8556aaef128d866f8adf8") (collects #"mzlib" #"class.rkt") (collects #"mred" #"mred.rkt") (collects #"mzscheme" #"main.rkt") (collects #"mzlib" #"include.rkt") (collects #"scheme" #"mzscheme.rkt") (ext . #"/home/jhanschoo/.racket/planet/300/5.3.4/cache/soegaard/sicp.plt/2/1/primitives.scm"))

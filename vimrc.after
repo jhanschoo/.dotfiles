@@ -1,19 +1,19 @@
 " colorscheme setting
-colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night-Bright
 "colorscheme molokai
 
 " use relative line numbers when not in insert mode
-set relativenumber
-autocmd InsertEnter * :setlocal rnu&
-autocmd InsertLeave * :setlocal rnu
+"set relativenumber
+"autocmd InsertEnter * :setlocal rnu&
+"autocmd InsertLeave * :setlocal rnu
 
 " syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 "let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_wq=0
+"let g:syntastic_check_on_wq=0
 
 " fortran 90/95 setting
 let fortran_free_source=1
@@ -29,12 +29,12 @@ autocmd FileType md setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType sql setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " vim-indent-guides
-let g:indent_guides_guide_size = 1
+"let g:indent_guides_guide_size = 1
 
 "This allows for change paste motion cp{motion}
 "http://stackoverflow.com/questions/2471175/vim-replace-word-with-contents-of-paste-buffer
-nmap <silent> cp :set opfunc=ChangePaste<CR>g@
-function! ChangePaste(type, ...)
-    silent exe "normal! `[v`]\"_c"
-    silent exe "normal! p"
-endfunction
+"nmap <silent> cp :set opfunc=ChangePaste<CR>g@
+"function! ChangePaste(type, ...)
+"    silent exe "normal! `[v`]\"_c"
+"    silent exe "normal! p"
+"endfunction

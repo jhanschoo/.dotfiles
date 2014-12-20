@@ -1,4 +1,0 @@
-[client]
-user=stag_db_usr
-host=staging.cukhkd3vy9hv.us-east-1.rds.amazonaws.com
-port=3306

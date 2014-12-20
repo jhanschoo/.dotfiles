@@ -1,21 +1,33 @@
-[submodule ".vim"]
-	path = home/.vim
+[submodule "janus"]
+	path = janus
 	url = https://github.com/carlhuda/janus.git
-[submodule ".zprezto"]
-	path = home/.zprezto
-	url = https://github.com/jhanschoo/prezto.git
-[submodule "home/.janus/vim-indent-guides"]
-	path = home/.janus/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "home/.janus/rust.vim"]
-	path = home/.janus/rust.vim
-	url = git@github.com:wting/rust.vim.git
-[submodule "home/.rbenv"]
-	path = home/.rbenv
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "rbenv"]
+	path = rbenv
 	url = https://github.com/sstephenson/rbenv.git
-[submodule "home/.janus/emmet-vim"]
-	path = home/.janus/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
-[submodule "home/.emacs.d"]
-	path = home/.emacs.d
-	url = git@github.com:bbatsov/prelude.git
+[submodule "prelude"]
+	path = prelude
+	url = https://github.com/bbatsov/prelude.git
+[submodule "nvm"]
+	path = nvm
+	url = https://github.com/creationix/nvm.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot.git
+[submodule "rbenv-gem-rehash"]
+	path = rbenv-gem-rehash
+	url = https://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule "rbenv-gemset"]
+	path = rbenv-gemset
+	url = git://github.com/jf/rbenv-gemset.git
+[submodule "ruby-build"]
+	path = ruby-build
+	url = https://github.com/sstephenson/ruby-build.git
+[submodule "rbenv-default-gems"]
+	path = rbenv-default-gems
+	url = https://github.com/sstephenson/rbenv-default-gems.git
+[submodule "zsh-syntax-highlighting"]
+	path = zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git

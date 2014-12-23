@@ -28,6 +28,7 @@ ZSH_THEME="sorin"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -38,6 +39,7 @@ ZSH_THEME="sorin"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -46,10 +48,11 @@ ZSH_THEME="sorin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gem git npm osx pip vagrant virtualenvwrapper)
+plugins=(brew brew-cask gem git github heroku mosh npm osx pip vagrant virtualenvwrapper zsh-syntax-highlighting)
 
 # User configuration
 
+# Add user bin directories to PATH
 export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -80,17 +83,30 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+# algs4
+export PATH="$PATH:$HOME/algs4/bin"
+
+# Android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+
+# cabal
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+
+# Java
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export JDK_HOME="$(/usr/libexec/java_home)"
+
+# nvm
+source ~/.nvm/nvm.sh
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# nvm
-source ~/.nvm/nvm.sh
+# virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 
-# Android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+# z
+. `brew --prefix`/etc/profile.d/z.sh
 

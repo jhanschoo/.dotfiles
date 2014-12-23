@@ -1,7 +1,3 @@
-" colorscheme setting
-"colorscheme Tomorrow-Night-Bright
-"colorscheme molokai
-
 " use relative line numbers when not in insert mode
 "set relativenumber
 "autocmd InsertEnter * :setlocal rnu&
@@ -38,3 +34,5 @@ autocmd FileType sql setlocal shiftwidth=4 tabstop=4 softtabstop=4
 "    silent exe "normal! `[v`]\"_c"
 "    silent exe "normal! p"
 "endfunction
+
+colorscheme Tomorrow-Night-Bright

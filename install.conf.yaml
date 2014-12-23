@@ -23,6 +23,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.vim: janus/
     ~/.vimrc.after: vimrc.after
+    ~/.z: z
     ~/.zshrc: zshrc
 - shell: []
   #- ['cd janus && rake', Run rake in ./janus]

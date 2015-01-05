@@ -84,11 +84,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # algs4
+export CLASSPATH="$CLASSPATH:$HOME/algs4/stdlib.jar:$HOME/algs4/algs4.jar"
 export PATH="$PATH:$HOME/algs4/bin"
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+
+# C
+export CFLAGS="-g -Wall -O3 --std=c11 $CFLAGS"
 
 # cabal
 export PATH="$HOME/Library/Haskell/bin:$PATH"

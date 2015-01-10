@@ -7,7 +7,7 @@
 	editor = gvim
 #	excludesfile = ~/.gitignore
 [merge]
-  tool = gvimdiff
+	tool = gvimdiff
 [push]
 	default = simple
 [alias]

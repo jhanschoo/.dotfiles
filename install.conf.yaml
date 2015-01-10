@@ -25,6 +25,7 @@
     ~/.vim: janus/
     ~/.vimrc.after: vimrc.after
     ~/.zshrc: zshrc
+    ~/.z.sh: z/z.sh
 - shell: []
   #- ['cd janus && rake', Run rake in ./janus]
 

@@ -112,5 +112,5 @@ eval "$(rbenv init -)"
 source /usr/local/bin/virtualenvwrapper.sh
 
 # z
-. `brew --prefix`/etc/profile.d/z.sh
+source ~/.z.sh
 

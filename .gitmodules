@@ -1,15 +1,18 @@
 [submodule "janus"]
 	path = janus
 	url = https://github.com/carlhuda/janus.git
+  ignore = dirty
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "rbenv"]
 	path = rbenv
 	url = https://github.com/sstephenson/rbenv.git
+  ignore = untracked
 [submodule "prelude"]
 	path = prelude
 	url = https://github.com/bbatsov/prelude.git
+  ignore = untracked
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/creationix/nvm.git

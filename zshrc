@@ -92,7 +92,10 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 # C
-export CFLAGS="-g -Wall -O3 --std=c11 $CFLAGS"
+export CFLAGS="-g3 -Wall -O3 -std=c11 $CFLAGS"
+
+# C++
+export CXXFLAGS="-g3 -Wall -O3 -std=c++1y $CXXFLAGS"
 
 # cabal
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -114,3 +117,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 # z
 source ~/.z.sh
 
+# MUDs
+alias shangrila="telnet shangrilamux.com 9999"
+alias thereach="telnet thereachmux.org 2009"

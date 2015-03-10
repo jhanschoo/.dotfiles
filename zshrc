@@ -84,12 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # algs4
-export CLASSPATH="$CLASSPATH:$HOME/algs4/stdlib.jar:$HOME/algs4/algs4.jar"
-export PATH="$PATH:$HOME/algs4/bin"
+if [[ -d "$HOME/algs4" ]]; then
+  export CLASSPATH="$CLASSPATH:$HOME/algs4/stdlib.jar:$HOME/algs4/algs4.jar"
+  export PATH="$PATH:$HOME/algs4/bin"
+fi
 
 # Android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+if [[ -d "$HOME/Library/Android/sdk" ]]; then
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
+  export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+fi
 
 # C
 export CFLAGS="-g3 -Wall -O3 -std=c11 $CFLAGS"
@@ -98,25 +102,43 @@ export CFLAGS="-g3 -Wall -O3 -std=c11 $CFLAGS"
 export CXXFLAGS="-g3 -Wall -O3 -std=c++1y $CXXFLAGS"
 
 # cabal
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+if [[ -d "$HOME/Library/Haskell/bin" ]]; then
+  export PATH="$HOME/Library/Haskell/bin:$PATH"
+fi
+
+# gvm
+if [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]]; then
+  source "$HOME/.gvm/bin/gvm-init.sh"
+fi
 
 # Java
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export JDK_HOME="$(/usr/libexec/java_home)"
+if [[ -x "/usr/libexec/java_home" ]]; then
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+  export JDK_HOME="$(/usr/libexec/java_home)"
+fi
 
 # nvm
-source ~/.nvm/nvm.sh
+if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+  source "$HOME/.nvm/nvm.sh"
+fi
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [[ -s "$HOME/.rbenv/bin" ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 # virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # z
-source ~/.z.sh
+if [[ -s "$HOME/.z.sh" ]]; then
+  source ~/.z.sh
+fi
 
 # MUDs
 alias shangrila="telnet shangrilamux.com 9999"
 alias thereach="telnet thereachmux.org 2009"
+

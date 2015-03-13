@@ -1,0 +1,5 @@
+==== BROADCAST =================================================================
+* 09/03/15: GVM 2.3.0 out! Features 'outdated' command (thx @nobeans!). http://bit.ly/1aXypt5
+* 01/03/15: Rolling out GVM 2.2.1: addresses PR #316 http://bit.ly/17HSZvN
+* 27/02/15: Springboot 1.1.11.RELEASE has been released on GVM. #spring
+================================================================================

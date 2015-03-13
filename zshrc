@@ -114,9 +114,10 @@ if [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]]; then
 fi
 
 # Java
-if [[ -x "/usr/libexec/java_home" ]]; then
+if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
   export JAVA_HOME="$(/usr/libexec/java_home)"
-  export JDK_HOME="$(/usr/libexec/java_home)"
+  export JDK_HOME="$JAVA_HOME"
+  export PATH="$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH"
 fi
 
 # nvm

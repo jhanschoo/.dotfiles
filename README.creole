@@ -4,3 +4,4 @@
 ./install
 }}}
 
+TODO: add install.sh script to specify system configuration required

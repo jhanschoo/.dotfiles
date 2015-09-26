@@ -1,6 +1,6 @@
 - clean: []
 - shell:
-  #- [git submodule update --init --recursive, Installing submodules]
+  - [git submodule update --init --recursive, Installing submodules]
   - [mkdir -p prelude/vendor, Create ./prelude/vendor]
   - [mkdir -p prelude/personal, Create ./prelude/personal]
   - [mkdir -p prelude/themes, Create ./prelude/themes]
@@ -25,6 +25,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.vim: janus/
     ~/.vimrc.after: vimrc.after
+    ~/.zsh_aliases: zsh_aliases
     ~/.zshrc: zshrc
     ~/.z.sh: z/z.sh
 - shell: []

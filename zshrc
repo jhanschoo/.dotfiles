@@ -141,7 +141,8 @@ if [[ -s "$HOME/.z.sh" ]]; then
   source ~/.z.sh
 fi
 
-# MUDs
-alias shangrila="telnet shangrilamux.com 9999"
-alias thereach="telnet thereachmux.org 2009"
+# zsh_aliases
+if [[ -s "$HOME/.zsh_aliases" ]]; then
+  source $HOME/.zsh_aliases
+fi
 

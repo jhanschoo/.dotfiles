@@ -160,3 +160,5 @@ if [[ -s "$HOME/.zsh_aliases" ]]; then
   source $HOME/.zsh_aliases
 fi
 
+# postgres
+export PGDATA="/usr/local/var/postgres"

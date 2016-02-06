@@ -11,7 +11,7 @@
   ignore = untracked
 [submodule "prelude"]
 	path = prelude
-	url = https://github.com/bbatsov/prelude.git
+	url = git://github.com/bbatsov/prelude.git
   ignore = untracked
 [submodule "nvm"]
 	path = nvm

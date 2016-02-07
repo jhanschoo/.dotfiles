@@ -4,8 +4,8 @@
 (add-to-list
  'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+;(eval-after-load 'flycheck
+;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 
 (set-variable 'haskell-process-suggest-remove-import-lines t)
 (set-variable 'haskell-process-auto-import-loaded-modules t)

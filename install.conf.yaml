@@ -10,6 +10,7 @@
     ~/.emacs.d: prelude/
     ~/.emacs.d/prelude-modules.el: prelude-modules.el
     ~/.emacs.d/personal/init.el: emacs.d-personal-init.el
+    ~/.emacs.d/personal/custom.el: emacs.d-personal-custom.el
     ~/.gitconfig: gitconfig
     ~/.gvm: gvm/
     ~/.nvm: nvm/

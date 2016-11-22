@@ -99,12 +99,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# algs4
-if [[ -d "$HOME/algs4" ]]; then
-  export CLASSPATH="$CLASSPATH:$HOME/algs4/stdlib.jar:$HOME/algs4/algs4.jar"
-  export PATH="$PATH:$HOME/algs4/bin"
-fi
-
 # Android
 if [[ -d "$HOME/Library/Android/sdk" ]]; then
   export ANDROID_HOME="$HOME/Library/Android/sdk"

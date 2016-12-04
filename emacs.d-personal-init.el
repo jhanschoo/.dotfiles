@@ -10,26 +10,28 @@
 (add-to-list
  'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-;(eval-after-load 'flycheck
-;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-
-; For haskell?
+;;(eval-after-load 'flycheck
+;;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 
 ; make Right Alt passthrough
-;(setq ns-right-alternate-modifier nil)
+(setq ns-right-alternate-modifier nil)
 
-(set-variable 'haskell-process-suggest-remove-import-lines t)
-(set-variable 'haskell-process-auto-import-loaded-modules t)
-(set-variable 'haskell-process-log t)
 
-; customize whitespace-mode
+;; Haskell process configuration
+
+;;(set-variable 'haskell-process-suggest-remove-import-lines t)
+;;(set-variable 'haskell-process-auto-import-loaded-modules t)
+;;(set-variable 'haskell-process-log t)
+
+;; customize whitespace-mode
 
 (setq whitespace-style '(face tabs empty trailing))
 
-; AUCTeX config
+;; AUCTeX config
 
 
-; org-mode config
+
+;; org-mode config
 
 (set-variable 'org-directory "~/Documents/org")
 (set-variable 'org-default-notes-file (concat org-directory "/index.org"))
@@ -37,7 +39,7 @@
 (set-variable 'org-mobile-inbox-for-pull org-default-notes-file)
 (set-variable 'org-html-doctype "xhtml5")
 (set-variable 'org-html-html5-fancy t)
-;(set-variable 'org-html-use-infojs t)
+;;(set-variable 'org-html-use-infojs t)
 ;;(set-variable 'org-html-head "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js\"></script>")
 
 (set-variable 'org-html-head "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css\" />
@@ -69,11 +71,11 @@ margin: 0.5em 0 0.5em 0;
                  :publishing-function org-publish-attachment)
                 ("org"
                  :components ("org-notes" "org-static"))))
-;(define-key global-map "\C-cc" 'org-capture)
+;;(define-key global-map "\C-cc" 'org-capture)
 
-; Color theme
+;; Color theme
 
 (load-theme 'sanityinc-tomorrow-night)
 
 (provide 'emacs.d-personal-init)
-; emacs.d-personal-init.el ends here
+;;; emacs.d-personal-init.el ends here

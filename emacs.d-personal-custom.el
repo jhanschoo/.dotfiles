@@ -36,6 +36,10 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode nil t)
+ '(package-selected-packages
+   (quote
+    (markdown-mode anaconda-mode async avy company dash f gh git-commit helm helm-core ido-completing-read+ json-reformat magit-popup pcache popup projectile pythonic rich-minority s seq with-editor zop-to-char zenburn-theme yaml-mode which-key volatile-highlights vkill undo-tree smex smartrep smartparens smart-mode-line rainbow-mode rainbow-delimiters ov operate-on-number move-text magit json-mode js2-mode imenu-anywhere ido-ubiquitous helm-projectile haskell-mode guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido expand-region exec-path-from-shell elisp-slime-nav easy-kill discover-my-major diminish diff-hl crux company-anaconda color-theme-sanityinc-tomorrow browse-kill-ring beacon anzu ace-window)))
+ '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(size-indication-mode t)
  '(visual-line-mode nil t))
 (custom-set-faces

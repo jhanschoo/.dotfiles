@@ -1,3 +1,9 @@
+;;; emacs.d-personal-init.el --- jhanschoo's customizations for Emacs Prelude
+;;; Commentary:
+;; Copyright (C) 2015-2016 Johannes Choo <jhanschoo@gmail.com>
+;; This file is *NOT* part of GNU Emacs.
+;;; Code:
+
 (prelude-require-packages
  '(color-theme-sanityinc-tomorrow))
 
@@ -16,9 +22,12 @@
 (set-variable 'haskell-process-auto-import-loaded-modules t)
 (set-variable 'haskell-process-log t)
 
-; disable whitespace-mode
+; customize whitespace-mode
 
 (setq whitespace-style '(face tabs empty trailing))
+
+; AUCTeX config
+
 
 ; org-mode config
 
@@ -65,3 +74,6 @@ margin: 0.5em 0 0.5em 0;
 ; Color theme
 
 (load-theme 'sanityinc-tomorrow-night)
+
+(provide 'emacs.d-personal-init)
+; emacs.d-personal-init.el ends here

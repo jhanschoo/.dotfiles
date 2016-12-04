@@ -29,20 +29,28 @@
 
 ;; AUCTeX config
 
+;;(add-hook ’plain-TeX-mode-hook
+;;           (lambda () (set (make-variable-buffer-local ’TeX-electric-math)
+;;                           (cons "$" "$"))))
 
+
+;;(add-hook ’LaTeX-mode-hook
+;;           (lambda () (set (make-variable-buffer-local ’TeX-electric-math)
+;;                           (cons "\\(" "\\)"))))
+;;(setq-default TeX-engine "luatex")
 
 ;; org-mode config
 
-(set-variable 'org-directory "~/Documents/org")
-(set-variable 'org-default-notes-file (concat org-directory "/index.org"))
-(set-variable 'org-mobile-directory org-directory)
-(set-variable 'org-mobile-inbox-for-pull org-default-notes-file)
-(set-variable 'org-html-doctype "xhtml5")
-(set-variable 'org-html-html5-fancy t)
+(setq org-directory "~/Documents/org")
+(setq org-default-notes-file (concat org-directory "/index.org"))
+(setq org-mobile-directory org-directory)
+(setq org-mobile-inbox-for-pull org-default-notes-file)
+(setq org-html-doctype "xhtml5")
+(setq org-html-html5-fancy t)
 ;;(set-variable 'org-html-use-infojs t)
 ;;(set-variable 'org-html-head "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js\"></script>")
 
-(set-variable 'org-html-head "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css\" />
+(setq org-html-head "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css\" />
 <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <style type=\"text/css\">
 body {
@@ -54,7 +62,7 @@ margin: 0.5em 0 0.5em 0;
 }
 </style>")
 
-(set-variable 'org-publish-project-alist
+(setq org-publish-project-alist
               '(("org-notes"
                  :base-directory "~/Documents/org"
                  :publishing-directory "~/Documents/public_html/"

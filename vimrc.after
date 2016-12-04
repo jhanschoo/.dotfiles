@@ -35,4 +35,4 @@ autocmd FileType sql setlocal shiftwidth=4 tabstop=4 softtabstop=4
 "    silent exe "normal! p"
 "endfunction
 
-colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night

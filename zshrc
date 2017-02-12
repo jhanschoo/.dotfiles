@@ -53,22 +53,18 @@ plugins=(
   brew-cask
   gem
   git
-  #github
-  heroku
-  mosh
+  github
+#  heroku
+#  mosh
   npm
   osx
   pip
-  vagrant
+#  vagrant
   virtualenvwrapper
   zsh-syntax-highlighting
 )
 
 # User configuration
-
-# Add user bin directories to PATH
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
 if [[ -s "$ZSH/oh-my-zsh.sh" ]]; then
   source $ZSH/oh-my-zsh.sh
@@ -87,6 +83,12 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# C
+export CFLAGS="-g3 -Wall -O3 -std=c11 $CFLAGS"
+
+# C++
+export CXXFLAGS="-g3 -Wall -O3 -std=c++1y $CXXFLAGS"
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
@@ -98,61 +100,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Android
-if [[ -d "$HOME/Library/Android/sdk" ]]; then
-  export ANDROID_HOME="$HOME/Library/Android/sdk"
-  export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
-fi
-
-# C
-export CFLAGS="-g3 -Wall -O3 -std=c11 $CFLAGS"
-
-# C++
-export CXXFLAGS="-g3 -Wall -O3 -std=c++1y $CXXFLAGS"
-
-# cabal
-if [[ -d "$HOME/Library/Haskell/bin" ]]; then
-  export PATH="$HOME/Library/Haskell/bin:$PATH"
-fi
-
-# gvm
-if [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]]; then
-  source "$HOME/.gvm/bin/gvm-init.sh"
-fi
-
-# Java
-if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
-  export JAVA_HOME="$(/usr/libexec/java_home)"
-  export JDK_HOME="$JAVA_HOME"
-  export PATH="$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH"
-fi
-
-# nvm
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  source "$HOME/.nvm/nvm.sh"
-fi
-
-# rbenv
-if [[ -s "$HOME/.rbenv/bin" ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
-# virtualenvwrapper
-if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
-
-# z
-if [[ -s "$HOME/.z.sh" ]]; then
-  source ~/.z.sh
-fi
-
-# zsh_aliases
-if [[ -s "$HOME/.zsh_aliases" ]]; then
-  source $HOME/.zsh_aliases
-fi
-
-# postgres
-export PGDATA="/usr/local/var/postgres"

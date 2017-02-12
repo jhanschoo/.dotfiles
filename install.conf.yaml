@@ -27,6 +27,7 @@
     ~/.vim: janus/
     ~/.vimrc.after: vimrc.after
     ~/.zsh_aliases: zsh_aliases
+    ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.z.sh: z/z.sh
 - shell: []

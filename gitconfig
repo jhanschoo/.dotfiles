@@ -20,3 +20,5 @@
 	last = log -1 HEAD
 	visual = !gitk
 	stash-unapply = !git stash show -p | git apply -R
+[credential]
+	helper = osxkeychain

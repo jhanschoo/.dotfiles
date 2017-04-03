@@ -1,2 +1,4 @@
 .DS_Store
-/sdkman/tmp/
+/sdkman/archives/*
+/sdkman/candidates/*
+/sdkman/tmp/*

@@ -37,7 +37,7 @@ fi
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-if [[ -d "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+if [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
     export SDKMAN_DIR="/Users/jhanschoo/.sdkman"
     source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi

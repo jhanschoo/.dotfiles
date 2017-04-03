@@ -35,6 +35,13 @@ if [[ -s "$HOME/.rbenv/bin" ]]; then
     eval "$(rbenv init -)"
 fi
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+if [[ -d "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+    export SDKMAN_DIR="/Users/jhanschoo/.sdkman"
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
+
 # TeXLive
 if [[ -d "/Library/TeX/texbin" ]]; then
     export PATH="/Library/TeX/texbin:$PATH"
@@ -42,8 +49,8 @@ fi
 
 # virtualenvwrapper
 if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
     export PROJECT_HOME="$HOME/Documents"
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 # z

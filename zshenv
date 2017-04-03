@@ -13,12 +13,6 @@ if [[ -d "$HOME/Library/Haskell/bin" ]]; then
     export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
 
-
-# gvm
-if [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]]; then
-    source "$HOME/.gvm/bin/gvm-init.sh"
-fi
-
 # Java
 if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
     export JAVA_HOME="$(/usr/libexec/java_home)"
@@ -49,6 +43,7 @@ fi
 # virtualenvwrapper
 if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
     source /usr/local/bin/virtualenvwrapper.sh
+    export PROJECT_HOME="$HOME/Documents"
 fi
 
 # z

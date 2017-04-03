@@ -12,7 +12,6 @@
     ~/.emacs.d/personal/init.el: emacs.d-personal-init.el
     ~/.emacs.d/personal/custom.el: emacs.d-personal-custom.el
     ~/.gitconfig: gitconfig
-    ~/.gvm: gvm/
     ~/.nvm: nvm/
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/

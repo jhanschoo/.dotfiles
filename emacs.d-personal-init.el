@@ -50,6 +50,11 @@
 
 (setq font-latex-fontify-sectioning "color")
 
+;; Add path to TeX Live on OS X
+(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+(setq exec-path (append exec-path '(":/Library/TeX/texbin")))
+
+
 ;; org-mode config
 
 (setq org-directory "~/Documents/org")

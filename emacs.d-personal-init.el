@@ -65,8 +65,16 @@
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 (setq exec-path (append exec-path '(":/Library/TeX/texbin")))
 
-;; org-mode config
+;; Magit config
 
+;; Prompt to stage file after saving
+;; (add-hook 'after-save-hook
+;;           (lambda ()
+;;             (require 'magit-git)
+;;             (if (magit-git-repo-p default-directory)
+;;                 (magit-stage-file buffer-file-name))))
+
+;; Org mode config
 (setq org-directory "~/Documents/org")
 (setq org-default-notes-file (concat org-directory "/index.org"))
 (setq org-mobile-directory org-directory)
@@ -93,7 +101,11 @@
                  :components ("org-notes" "org-static"))))
 ;;(define-key global-map "\C-cc" 'org-capture)
 
-;;
+;; Projectile
+(add-hook 'projectile-before-switch-project-hook
+          (lambda ()
+            (if (projectile-project-p)
+                (projectile-kill-buffers))))
 
 ;; Color theme
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))

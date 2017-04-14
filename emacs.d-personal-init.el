@@ -4,56 +4,66 @@
 ;; This file is *NOT* part of GNU Emacs.
 ;;; Code:
 
+;;define adding multiple elements to a list
+(defun add-list-to-list (list-var elements &optional append compare-fn)
+  "Add each element in ELEMENTS to the value of LIST-VAR if it isn't there yet."
+  (dolist (item elements)
+    (add-to-list list-var item append compare-fn)))
+
 (prelude-require-packages
  '(color-theme-sanityinc-tomorrow))
 
 (add-to-list
  'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-;;(eval-after-load 'flycheck
-;;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-
 ; make Right Alt passthrough
 (setq ns-right-alternate-modifier nil)
 
-
-;; Haskell process configuration
-
-;;(set-variable 'haskell-process-suggest-remove-import-lines t)
-;;(set-variable 'haskell-process-auto-import-loaded-modules t)
-;;(set-variable 'haskell-process-log t)
+;; Unset irritating keybinding s-q
+(global-unset-key [8388721])
 
 ;; customize whitespace-mode
-
-(setq whitespace-style '(face tabs empty trailing))
+;; (setq whitespace-style '(face tabs empty trailing))
 
 ;; AUCTeX config
+(add-hook 'prelude-latex-mode-hook
+          (lambda ()
+            (add-list-to-list 'LaTeX-indent-environment-list
+                              ;; tabu support
+                              '(("tabu" LaTeX-indent-tabular)
+                                ("longtabu" LaTeX-indent-tabular)
+                                ;; AMSmath support
+                                ("aligned" LaTeX-indent-tabular)
+                                ("cases" LaTeX-indent-tabular)
+                                ("multline" LaTeX-indent-tabular)
+                                ("multline*" LaTeX-indent-tabular)
+                                ("smallmatrix" LaTeX-indent-tabular)
+                                ("matrix" LaTeX-indent-tabular)
+                                ("pmatrix" LaTeX-indent-tabular)
+                                ("bmatrix" LaTeX-indent-tabular)
+                                ("Bmatrix" LaTeX-indent-tabular)
+                                ("vmatrix" LaTeX-indent-tabular)
+                                ("Vmatrix" LaTeX-indent-tabular))
+                              t)))
 
-;;(add-hook ’plain-TeX-mode-hook
-;;           (lambda () (set (make-variable-buffer-local ’TeX-electric-math)
-;;                           (cons "$" "$"))))
+(setq LaTeX-paragraph-commands
+      '("toprule"
+        "midrule"
+        "bottomrule"
+        ))
 
 
-;;(add-hook ’LaTeX-mode-hook
-;;           (lambda () (set (make-variable-buffer-local ’TeX-electric-math)
-;;                           (cons "\\(" "\\)"))))
-;;(setq-default TeX-engine "luatex")
+(setq font-latex-fontify-script 'multi-level)
 
-(setq LaTeX-indent-environment-list
-      '(("verbatim" current-indentation)
-        ("verbatim*" current-indentation)
-        ("displaymath")
-        ("equation")
-        ("equation*")
-        ("picture")
-        ("tabbing")))
+;(setq font-latex-script-display '((raise -0.75) raise 0.75))
 
-(setq font-latex-fontify-sectioning "color")
+(setq font-latex-fontify-sectioning 'color)
+
+(setq TeX-source-correlate-mode t)
 
 ;; Add path to TeX Live on OS X
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 (setq exec-path (append exec-path '(":/Library/TeX/texbin")))
-
 
 ;; org-mode config
 
@@ -61,10 +71,8 @@
 (setq org-default-notes-file (concat org-directory "/index.org"))
 (setq org-mobile-directory org-directory)
 (setq org-mobile-inbox-for-pull org-default-notes-file)
-(setq org-html-doctype "xhtml5")
+(setq org-html-doctype "html5")
 (setq org-html-html5-fancy t)
-;;(set-variable 'org-html-use-infojs t)
-;;(set-variable 'org-html-head "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js\"></script>")
 
 (setq org-publish-project-alist
               '(("org-notes"
@@ -85,14 +93,12 @@
                  :components ("org-notes" "org-static"))))
 ;;(define-key global-map "\C-cc" 'org-capture)
 
-;; Color theme
+;;
 
+;; Color theme
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
 (load-theme 'sanityinc-tomorrow-day)
 (enable-theme 'sanityinc-tomorrow-day)
-
-;; Unset irritating keybinding s-q
-(global-unset-key [8388721])
 
 ;; always show line numbers
 (global-linum-mode t)

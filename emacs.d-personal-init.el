@@ -22,6 +22,18 @@
 ;; Unset irritating keybinding s-q
 (global-unset-key [8388721])
 
+;; Delete commands should move to Trash instead
+(setq delete-by-moving-to-trash t)
+
+;; Smooth scrolling
+(require 'smooth-scroll)
+(smooth-scroll-mode 1)
+(setq smooth-scroll/vscroll-step-size 5)
+
+;; Prettify symbols
+(global-prettify-symbols-mode)
+(setq prettify-symbols-unprettify-at-point 'right-edge)
+
 ;; customize whitespace-mode
 ;; (setq whitespace-style '(face tabs empty trailing))
 
@@ -29,8 +41,10 @@
 (add-hook 'prelude-latex-mode-hook
           (lambda ()
             (add-list-to-list 'LaTeX-indent-environment-list
+                              ;; listings support
+                              '(("lstlisting" current-indentation)
                               ;; tabu support
-                              '(("tabu" LaTeX-indent-tabular)
+                                ("tabu" LaTeX-indent-tabular)
                                 ("longtabu" LaTeX-indent-tabular)
                                 ;; AMSmath support
                                 ("aligned" LaTeX-indent-tabular)
@@ -44,7 +58,19 @@
                                 ("Bmatrix" LaTeX-indent-tabular)
                                 ("vmatrix" LaTeX-indent-tabular)
                                 ("Vmatrix" LaTeX-indent-tabular))
-                              t)))
+                              t)
+            (add-to-list 'LaTeX-verbatim-macros-with-delims "l")
+            (add-to-list 'LaTeX-verbatim-environments "lstlisting")
+            (when (eq system-type 'darwin)
+              (setq TeX-view-program-list
+                    '(("DVI Viewer" "/Applications/Skim.app/\
+Contents/SharedSupport/displayline %n %o %b")
+                      ("PDF Viewer"
+                       "/Applications/Skim.app/\
+Contents/SharedSupport/displayline %n %o %b")
+                      ("HTML Viewer" "open %o"))))
+            (TeX-fold-mode t)
+            (TeX-source-correlate-mode t)))
 
 (setq LaTeX-paragraph-commands
       '("toprule"
@@ -55,11 +81,9 @@
 
 (setq font-latex-fontify-script 'multi-level)
 
-;(setq font-latex-script-display '((raise -0.75) raise 0.75))
+(setq font-latex-script-display '((raise -0.25) raise 0.25))
 
-(setq font-latex-fontify-sectioning 'color)
-
-(setq TeX-source-correlate-mode t)
+(setq TeX-engine 'luatex)
 
 ;; Add path to TeX Live on OS X
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
@@ -108,7 +132,7 @@
                 (projectile-kill-buffers))))
 
 ;; Color theme
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
+;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-11"))
 (load-theme 'sanityinc-tomorrow-day)
 (enable-theme 'sanityinc-tomorrow-day)
 

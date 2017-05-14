@@ -16,10 +16,6 @@
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/
     ~/.rbenv: rbenv/
-    ~/.rbenv/default-gems: default-gems
-    ~/.rbenv/plugins/rbenv-default-gems: rbenv-default-gems/
-    ~/.rbenv/plugins/rbenv-gemset: rbenv-gemset/
-    ~/.rbenv/plugins/rbenv-gem-rehash: rbenv-gem-rehash/
     ~/.rbenv/plugins/ruby-build: ruby-build/
     ~/.ruby-version: ruby-version
     ~/.sdkman: sdkman

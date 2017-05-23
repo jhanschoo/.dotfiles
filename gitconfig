@@ -4,21 +4,24 @@
 [color]
 	ui = true
 [core]
-	editor = gvim
-#	excludesfile = ~/.gitignore
-[merge]
-	tool = gvimdiff
+	excludesfile = ~/.gitignore
 [push]
 	default = simple
 [alias]
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	co = checkout
 	br = branch
-	ci = commit
+	c = commit
 	st = status
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	visual = !gitk
 	stash-unapply = !git stash show -p | git apply -R
+	cob = checkout -b
+	cam = commit -am
+	s = status -s
+	d = diff
+	a = add
+	cm = commit -m
 [credential]
 	helper = osxkeychain

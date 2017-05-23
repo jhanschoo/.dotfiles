@@ -1,6 +1,11 @@
+# Change PATH to that of system
+if [[ -x /usr/libexec/path_helper ]]; then
+	eval $(/usr/libexec/path_helper -s)
+fi
+
 # Add user bin directories to PATH
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+export "PATH=$HOME/bin:$PATH"
+#export MANPATH="/usr/local/man:$MANPATH"
 
 # Android
 if [[ -d "$HOME/Library/Android/sdk" ]]; then
@@ -35,7 +40,7 @@ if [[ -s "$HOME/.rbenv/bin" ]]; then
     eval "$(rbenv init -)"
 fi
 
-
+# sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 if [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
     export SDKMAN_DIR="/Users/jhanschoo/.sdkman"
@@ -62,3 +67,6 @@ fi
 if [[ -s "$HOME/.zsh_aliases" ]]; then
     source $HOME/.zsh_aliases
 fi
+
+# workaround for /etc/profile resetting paths
+export ZSHENV_SET_PATH="$PATH"

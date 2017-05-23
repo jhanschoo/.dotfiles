@@ -1,3 +1,6 @@
+# workaround for /etc/profile resetting paths
+export PATH="$ZSHENV_SET_PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 

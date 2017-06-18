@@ -22,6 +22,7 @@
 	s = status -s
 	d = diff
 	a = add
+	A = add -A
 	cm = commit -m
 [credential]
 	helper = osxkeychain

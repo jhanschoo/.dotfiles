@@ -13,7 +13,7 @@
  '(ns-right-alternate-modifier nil)
  '(package-selected-packages
    (quote
-    (smooth-scroll gradle-mode groovy-mode markdown-mode color-theme-sanityinc-tomorrow yaml-mode rainbow-delimiters geiser anaconda-mode cdlatex auctex json-mode js2-mode helm-projectile helm smex ido-ubiquitous flx-ido vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window)))
+    (emmet-mode scss-mode smooth-scroll gradle-mode groovy-mode markdown-mode color-theme-sanityinc-tomorrow yaml-mode rainbow-delimiters geiser anaconda-mode cdlatex auctex json-mode js2-mode helm-projectile helm smex ido-ubiquitous flx-ido vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

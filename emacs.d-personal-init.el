@@ -37,6 +37,15 @@
 ;; customize whitespace-mode
 ;; (setq whitespace-style '(face tabs empty trailing))
 
+;; Web mode config
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+
+;; Emmet config
+(add-hook 'web-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+
 ;; AUCTeX config
 (add-hook 'prelude-latex-mode-hook
           (lambda ()

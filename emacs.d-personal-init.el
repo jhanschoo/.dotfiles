@@ -53,8 +53,8 @@
                               ;; listings support
                               '(("lstlisting" current-indentation)
                               ;; tabu support
-                                ("tabu" LaTeX-indent-tabular)
-                                ("longtabu" LaTeX-indent-tabular)
+                                ;;("tabu" LaTeX-indent-tabular)
+                                ;;("longtabu" LaTeX-indent-tabular)
                                 ;; AMSmath support
                                 ("aligned" LaTeX-indent-tabular)
                                 ("cases" LaTeX-indent-tabular)
@@ -135,10 +135,10 @@ Contents/SharedSupport/displayline %n %o %b")
 ;;(define-key global-map "\C-cc" 'org-capture)
 
 ;; Projectile
-(add-hook 'projectile-before-switch-project-hook
-          (lambda ()
-            (if (projectile-project-p)
-                (projectile-kill-buffers))))
+;; (add-hook 'projectile-before-switch-project-hook
+;;           (lambda ()
+;;             (if (projectile-project-p)
+;;                 (projectile-kill-buffers))))
 
 ;; Color theme
 ;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-11"))

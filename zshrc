@@ -104,6 +104,6 @@ export CXXFLAGS="-g3 -Wall -O3 -std=c++1y $CXXFLAGS"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PS1="($((366-$(print -P "%D{%j}"))))$PS1"
+#PS1="($((366-$(print -P "%D{%j}"))))$PS1"
 
 date

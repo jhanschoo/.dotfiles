@@ -3,6 +3,9 @@ if [[ -x /usr/libexec/path_helper ]]; then
 	eval $(/usr/libexec/path_helper -s)
 fi
 
+# Add local sbin directory to PATH
+export "PATH=/usr/local/sbin:$PATH"
+
 # Add user bin directories to PATH
 export "PATH=$HOME/bin:$PATH"
 #export MANPATH="/usr/local/man:$MANPATH"
@@ -27,6 +30,7 @@ fi
 
 # nvm
 if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+    export NVM_DIR=${${:-"$HOME/.nvm"}:A}
     source "$HOME/.nvm/nvm.sh"
 fi
 

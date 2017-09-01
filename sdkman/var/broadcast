@@ -1,5 +1,5 @@
 ==== BROADCAST =================================================================
-* 03/04/17: Groovy 2.5.0-alpha-1 released on SDKMAN! #groovylang
-* 31/03/17: SDKMAN! 5.5.8 is out! Fixes several ZSH issues + local version installation.
-* 27/03/17: Gradle 3.5-rc-2 released on SDKMAN! #gradle
+* 13/08/17: sbt 1.0.0 released on SDKMAN! @scala_sbt #sbt
+* 12/08/17: Kscript 1.6.0 released on SDKMAN! #kscript
+* 10/08/17: Azul Zulu 9ea13 is now available for download from SDKMAN! on Linux, Mac OSX, Windows. #java
 ================================================================================

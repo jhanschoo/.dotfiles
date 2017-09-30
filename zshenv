@@ -37,6 +37,11 @@ fi
 # postgres
 export PGDATA="/usr/local/var/postgres"
 
+# racket
+export RACKET_HOME="/Applications/Racket v6.10"
+if [[ -d "$RACKET_HOME" ]]; then
+    export PATH="$RACKET_HOME/bin:$PATH"
+fi
 
 # rbenv
 if [[ -s "$HOME/.rbenv/bin" ]]; then

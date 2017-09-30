@@ -1,5 +1,5 @@
 ==== BROADCAST =================================================================
-* 13/08/17: sbt 1.0.0 released on SDKMAN! @scala_sbt #sbt
-* 12/08/17: Kscript 1.6.0 released on SDKMAN! #kscript
-* 10/08/17: Azul Zulu 9ea13 is now available for download from SDKMAN! on Linux, Mac OSX, Windows. #java
+* 22/09/17: Kotlin 1.1.50 released on SDKMAN! #kotlin
+* 22/09/17: Grails 3.3.1 released on SDKMAN! #grailsfw
+* 20/09/17: Gradle 4.2 released on SDKMAN! #gradle
 ================================================================================

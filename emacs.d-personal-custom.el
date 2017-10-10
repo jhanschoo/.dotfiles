@@ -20,5 +20,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#ffffff" :foreground "#4d4d4c" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "nil" :family "DejaVu Sans Mono"))))
- '(fixed-pitch ((t (:family "DejaVu Sans Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "#ffffff" :foreground "#4d4d4c" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "nil" :family "Inziu Iosevka SC"))))
+ '(fixed-pitch ((t (:family "Inziu Iosevka SC")))))

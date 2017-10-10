@@ -3,3 +3,6 @@
 /sdkman/archives/*
 /sdkman/candidates/*
 /sdkman/tmp/*
+/phpbrew/build/*
+/phpbrew/php/*
+/phpbrew/distfiles/*

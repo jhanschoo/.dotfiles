@@ -16,7 +16,7 @@
 (add-to-list
  'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-; make Right Alt passthrough
+;; make Right Alt passthrough
 (setq ns-right-alternate-modifier nil)
 
 ;; Unset irritating keybinding s-q
@@ -29,6 +29,13 @@
 (require 'smooth-scroll)
 (smooth-scroll-mode 1)
 (setq smooth-scroll/vscroll-step-size 5)
+
+;; more useful frame title, that show either a file or a
+;; buffer name (if the buffer isn't visiting a file)
+(setq frame-title-format
+      '("" (:eval (if (buffer-file-name)
+                      (abbreviate-file-name (buffer-file-name))
+                    "%b")) "—" invocation-name " Prelude" ))
 
 ;; Prettify symbols
 (global-prettify-symbols-mode)
@@ -49,25 +56,42 @@
 ;; AUCTeX config
 (add-hook 'prelude-latex-mode-hook
           (lambda ()
-            (add-list-to-list 'LaTeX-indent-environment-list
+            ;(add-list-to-list 'LaTeX-indent-environment-list
                               ;; listings support
-                              '(("lstlisting" current-indentation)
+                              ;'(("lstlisting" current-indentation)
                               ;; tabu support
                                 ;;("tabu" LaTeX-indent-tabular)
                                 ;;("longtabu" LaTeX-indent-tabular)
                                 ;; AMSmath support
-                                ("aligned" LaTeX-indent-tabular)
-                                ("cases" LaTeX-indent-tabular)
-                                ("multline" LaTeX-indent-tabular)
-                                ("multline*" LaTeX-indent-tabular)
-                                ("smallmatrix" LaTeX-indent-tabular)
-                                ("matrix" LaTeX-indent-tabular)
-                                ("pmatrix" LaTeX-indent-tabular)
-                                ("bmatrix" LaTeX-indent-tabular)
-                                ("Bmatrix" LaTeX-indent-tabular)
-                                ("vmatrix" LaTeX-indent-tabular)
-                                ("Vmatrix" LaTeX-indent-tabular))
-                              t)
+                                ;("aligned" LaTeX-indent-tabular)
+                                ;("cases" LaTeX-indent-tabular)
+                                ;("multline" LaTeX-indent-tabular)
+                                ;("multline*" LaTeX-indent-tabular)
+                                ;("smallmatrix" LaTeX-indent-tabular)
+                                ;("pmatrix" LaTeX-indent-tabular)
+                                ;("pmatrix" LaTeX-indent-tabular)
+                                ;("bmatrix" LaTeX-indent-tabular)
+                                ;("Bmatrix" LaTeX-indent-tabular)
+                                ;("vmatrix" LaTeX-indent-tabular)
+                                ;("Vmatrix" LaTeX-indent-tabular)
+                                ;)
+                              ;t)
+            (setq LaTeX-indent-environment-list
+                  '(("verbatim" current-indentation)
+                  ("verbatim" current-indentation)
+                  ("lstlisting" current-indentation)
+                  ("tabular")
+                  ("tabular*")
+                  ("align")
+                  ("align*")
+                  ("array")
+                  ("eqnarray")
+                  ("eqnarray*")
+                  ("displaymath")
+                  ("equation")
+                  ("equation*")
+                  ("picture")
+                  ("tabbing")))
             (add-to-list 'LaTeX-verbatim-macros-with-delims "l")
             (add-to-list 'LaTeX-verbatim-environments "lstlisting")
             (when (eq system-type 'darwin)

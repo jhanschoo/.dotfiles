@@ -34,6 +34,14 @@ if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
     source "$HOME/.nvm/nvm.sh"
 fi
 
+# phpbrew
+if [[ -s "$HOME/.phpbrew/zshrc" ]]; then
+    #export PHPBREW_SET_PROMPT=1
+    #export PHPBREW_RC_ENABLE=1
+    # todo: diagnose bash-zsh incompatibility
+    source "$HOME/.phpbrew/zshrc"
+fi
+
 # postgres
 export PGDATA="/usr/local/var/postgres"
 

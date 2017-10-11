@@ -1,0 +1,81 @@
+## git add
+git add -i # interactive add
+git add --patch # interactive partial-file-staging
+
+## git bisect
+git bisect start # start git bisect process
+git bisect bad # initialize bad commit to current
+git bisect good [commit] # initializr good commit
+git bisect bad # mark current commit as bad
+git bisect good # mark current commit as good
+git bisect reset # end git bisect process
+
+## git blame
+git blame # see per-line last committer and commit
+
+## git branch
+git branch --merged # show merged branches
+git branch --no-merged # show unmerged branched
+
+## git checkout
+git checkout -b [localbranch] [remote]/[branch] # track remote branch
+git checkout --track [remote]/[branch] # shorthand for above
+git checkout [branch] # shorthand for above
+
+## git clean
+git clean # remove untracked files
+git clean -n # dry run
+
+## git filter-branch
+git filter-branch --tree-filter '[command]' [commit] # TODO
+
+## git grep
+git grep [...] # grep working directory
+
+## git log
+git log -p # include diff
+git log --stat # include summary of changes
+git log -S "[string]" # show only commits that added/removed [string]s
+
+## git push
+git push [remotename] --tags # push local tags to remote
+git push [remotename] --delete [remotebranch] # delete remote branch
+
+# git rebase
+git rebase [b] # replay changes from common ancestor to HEAD on [b]
+git rebase --onto [a] [b] [c] # replay from c. a. of [b] and [c] to [c] on [a]
+git rebase -i [ancestorcommit] # interactive squashing to [ancestorcommit]
+    # reorder to reorder commits
+    # delete to delete commit (and its changes)
+    # squash to squash towards earlier
+    # edit to interactively split a commit or modify a commit,
+    #     then use git rebase --continue to continue rebasing
+
+## git remote
+git remote show [remote-name] # inspect remote details incl. branches
+
+## git reset
+git reset --soft [commit] # move HEAD and branch pointer to [commit]
+git reset [commit] # also sets staging to HEAD state
+git reset --hard [commit] # also overwrites wiring directory with HEAD state
+
+## git rm
+git rm --cached [path] # remove from staging area only.
+
+## git tag
+git tag -l "[pattern]" # list matching tags
+git tag -a [name] -m "[annotation]" # create annotated tag
+git tag -a [name] [commitname] # tag [commitname] instead
+
+# git stash
+git stash
+git stash list
+git stash apply [stash] # merge (un)staged changes to working directory
+git stash apply --index # also merge staged changes to staged
+git stash drop [stash] # remove [stash]
+git stash pop [stash]
+git stash branch [branchname] # merge to a new branch
+
+## more git tools
+git difftool
+git mergetool

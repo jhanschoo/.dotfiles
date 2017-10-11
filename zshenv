@@ -21,6 +21,11 @@ if [[ -d "$HOME/Library/Haskell/bin" ]]; then
     export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
 
+# php composer
+if [[ -d "$HOME/.composer/vendor/bin" ]]; then
+    export PATH="$HOME/.composer/vendor/bin:$PATH"
+fi
+
 # Java
 if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
     export JAVA_HOME="$(/usr/libexec/java_home)"
@@ -38,7 +43,6 @@ fi
 if [[ -s "$HOME/.phpbrew/zshrc" ]]; then
     #export PHPBREW_SET_PROMPT=1
     #export PHPBREW_RC_ENABLE=1
-    # todo: diagnose bash-zsh incompatibility
     source "$HOME/.phpbrew/zshrc"
 fi
 

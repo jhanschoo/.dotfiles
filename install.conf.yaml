@@ -7,6 +7,7 @@
   - [mkdir -p prelude/savefile, Create ./prelude/savefile]
   - [mkdir -p rbenv/plugins, Create ./rbenv/plugins]
 - link:
+    ~/.editorconfig: editorconfig
     ~/.emacs.d: prelude/
     ~/.emacs.d/prelude-modules.el: prelude-modules.el
     ~/.emacs.d/personal/init.el: emacs.d-personal-init.el
@@ -30,4 +31,3 @@
     ~/.z.sh: z/z.sh
 - shell: []
   #- ['cd janus && rake', Run rake in ./janus]
-

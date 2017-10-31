@@ -22,6 +22,9 @@
 ;; Unset irritating keybinding s-q
 (global-unset-key [8388721])
 
+;; Don't automatically enable spell-checking
+(setq prelude-flyspell nil)
+
 ;; Delete commands should move to Trash instead
 (setq delete-by-moving-to-trash t)
 
@@ -54,6 +57,7 @@
 (add-hook 'css-mode-hook 'emmet-mode)
 
 ;; AUCTeX config
+(setq TeX-parse-self nil)
 (add-hook 'prelude-latex-mode-hook
           (lambda ()
             ;(add-list-to-list 'LaTeX-indent-environment-list

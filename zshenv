@@ -75,8 +75,8 @@ fi
 
 # virtualenvwrapper
 if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
-    export VIRTUALENVWRAPPER_PYTHON="python3"
-    export VIRTUALENV_PYTHON="python3"
+    export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+    export VIRTUALENV_PYTHON=$(which python3)
     export PROJECT_HOME="$HOME/Documents"
     source /usr/local/bin/virtualenvwrapper.sh
 fi

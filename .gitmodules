@@ -13,9 +13,6 @@
 	path = prelude
 	url = git://github.com/bbatsov/prelude.git
   ignore = untracked
-[submodule "nvm"]
-	path = nvm
-	url = https://github.com/creationix/nvm.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot.git

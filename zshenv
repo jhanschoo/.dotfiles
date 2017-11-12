@@ -28,7 +28,8 @@ fi
 if [[ -d "${HOME}/.asdf" ]]; then
   export ASDF_DIR="${HOME}/.asdf"
   export PATH="${ASDF_DIR}/bin:${ASDF_DIR}/shims:$PATH"
-  source "${ASDF_DIR}/completions/asdf.bash"
+  autoload -U bashcompinit
+  bashcompinit
 fi
 
 # cabal

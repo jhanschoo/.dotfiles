@@ -106,4 +106,9 @@ export CXXFLAGS="-g3 -Wall -O3 -std=c++1y $CXXFLAGS"
 
 #PS1="($((366-$(print -P "%D{%j}"))))$PS1"
 
+# load asdf completions; requires complete function
+if [[ -d "${HOME}/.asdf" ]]; then
+  source "${ASDF_DIR}/completions/asdf.bash"
+fi
+
 date

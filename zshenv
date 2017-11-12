@@ -26,6 +26,12 @@ if [[ -d "$HOME/.composer/vendor/bin" ]]; then
     export PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
 
+# AFDKO
+if [[ -d "$HOME/bin/FDK" ]]; then
+  FDK_EXE="$HOME/bin/FDK/Tools/osx"
+  PATH="$PATH:$HOME/bin/FDK/Tools/osx"
+fi
+
 # Java
 if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
     export JAVA_HOME="$(/usr/libexec/java_home)"

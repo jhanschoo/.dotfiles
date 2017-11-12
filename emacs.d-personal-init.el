@@ -10,9 +10,6 @@
   (dolist (item elements)
     (add-to-list list-var item append compare-fn)))
 
-(prelude-require-packages
- '(color-theme-sanityinc-tomorrow))
-
 (add-to-list
  'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
@@ -170,8 +167,7 @@ Contents/SharedSupport/displayline %n %o %b")
 
 ;; Color theme
 ;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-11"))
-(load-theme 'sanityinc-tomorrow-day)
-(enable-theme 'sanityinc-tomorrow-day)
+(load-theme 'gruvbox-light-soft)
 
 ;; always show line numbers
 (global-linum-mode t)

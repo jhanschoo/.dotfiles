@@ -1,3 +1,11 @@
+case "$(uname -s)" in
+  Linux*)     machine=Linux;;
+  Darwin*)    machine=Darwin;;
+  CYGWIN*)    machine=Cygwin;;
+  MINGW*)     machine=MinGw;;
+  *)          machine="UNKNOWN:$(uname -s)"
+esac
+
 # Change PATH to that of system
 if [[ -x /usr/libexec/path_helper ]]; then
 	eval $(/usr/libexec/path_helper -s)
@@ -11,9 +19,16 @@ export "PATH=$HOME/bin:$PATH"
 #export MANPATH="/usr/local/man:$MANPATH"
 
 # Android
-if [[ -d "$HOME/Library/Android/sdk" ]]; then
-    export ANDROID_HOME="$HOME/Library/Android/sdk"
-    export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+if [[ -d "${HOME}/Library/Android/sdk" ]]; then
+    export ANDROID_HOME="${HOME}/Library/Android/sdk"
+    export PATH="${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools:$PATH"
+fi
+
+# asdf
+if [[ -d "${HOME}/.asdf" ]]; then
+  export ASDF_DIR="${HOME}/.asdf"
+  export PATH="${ASDF_DIR}/bin:${ASDF_DIR}/shims:$PATH"
+  source "${ASDF_DIR}/completions/asdf.bash"
 fi
 
 # cabal
@@ -27,7 +42,7 @@ if [[ -d "$HOME/.composer/vendor/bin" ]]; then
 fi
 
 # AFDKO
-if [[ -d "$HOME/bin/FDK" ]]; then
+if [[ -d "$HOME/bin/FDK" && machine = "Darwin" ]]; then
   FDK_EXE="$HOME/bin/FDK/Tools/osx"
   PATH="$PATH:$HOME/bin/FDK/Tools/osx"
 fi
@@ -68,7 +83,6 @@ if [[ -s "$HOME/.rbenv/bin" ]]; then
 fi
 
 # sdkman
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 if [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
     export SDKMAN_DIR="/Users/jhanschoo/.sdkman"
     source "$HOME/.sdkman/bin/sdkman-init.sh"

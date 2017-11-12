@@ -5,10 +5,6 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "rbenv"]
-	path = rbenv
-	url = https://github.com/sstephenson/rbenv.git
-  ignore = untracked
 [submodule "prelude"]
 	path = prelude
 	url = git://github.com/bbatsov/prelude.git
@@ -16,9 +12,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot.git
-[submodule "ruby-build"]
-	path = ruby-build
-	url = https://github.com/sstephenson/ruby-build.git
 [submodule "zsh-syntax-highlighting"]
 	path = zsh-syntax-highlighting
 	url = git://github.com/zsh-users/zsh-syntax-highlighting.git

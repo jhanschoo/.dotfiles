@@ -55,12 +55,6 @@ if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
     export PATH="$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH"
 fi
 
-# nvm
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-    export NVM_DIR=${${:-"$HOME/.nvm"}:A}
-    source "$HOME/.nvm/nvm.sh"
-fi
-
 # phpbrew
 if [[ -s "$HOME/.phpbrew/zshrc" ]]; then
     #export PHPBREW_SET_PROMPT=1
@@ -75,12 +69,6 @@ export PGDATA="/usr/local/var/postgres"
 export RACKET_HOME="/Applications/Racket v6.10"
 if [[ -d "$RACKET_HOME" ]]; then
     export PATH="$RACKET_HOME/bin:$PATH"
-fi
-
-# rbenv
-if [[ -s "$HOME/.rbenv/bin" ]]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
 fi
 
 # sdkman

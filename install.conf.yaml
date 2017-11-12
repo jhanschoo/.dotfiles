@@ -18,8 +18,6 @@
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/
     ~/.phpbrew: phpbrew/
-    ~/.rbenv: rbenv/
-    ~/.rbenv/plugins/ruby-build: ruby-build/
     ~/.ruby-version: ruby-version
     ~/.sdkman: sdkman
     ~/.tmux.conf: tmux.conf

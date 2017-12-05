@@ -18,6 +18,12 @@ export "PATH=/usr/local/sbin:$PATH"
 export "PATH=$HOME/bin:$PATH"
 #export MANPATH="/usr/local/man:$MANPATH"
 
+# AFDKO
+if [[ -d "$HOME/bin/FDK" && machine = "Darwin" ]]; then
+  FDK_EXE="$HOME/bin/FDK/Tools/osx"
+  PATH="$PATH:$HOME/bin/FDK/Tools/osx"
+fi
+
 # Android
 if [[ -d "${HOME}/Library/Android/sdk" ]]; then
     export ANDROID_HOME="${HOME}/Library/Android/sdk"
@@ -42,17 +48,16 @@ if [[ -d "$HOME/.composer/vendor/bin" ]]; then
     export PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
 
-# AFDKO
-if [[ -d "$HOME/bin/FDK" && machine = "Darwin" ]]; then
-  FDK_EXE="$HOME/bin/FDK/Tools/osx"
-  PATH="$PATH:$HOME/bin/FDK/Tools/osx"
-fi
-
 # Java
 if [[ -x "/usr/libexec/java_home" && -d $(/usr/libexec/java_home) ]]; then
     export JAVA_HOME="$(/usr/libexec/java_home)"
     export JDK_HOME="$JAVA_HOME"
     export PATH="$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH"
+fi
+
+# OPAM
+if [[ -s "$HOME/.opam/opam-init/init.zsh" ]]; then
+  source "$HOME/.opam/opam-init/init.zsh"
 fi
 
 # phpbrew

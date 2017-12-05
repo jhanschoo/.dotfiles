@@ -102,7 +102,8 @@ Contents/SharedSupport/displayline %n %o %b")
                       ("PDF Viewer"
                        "/Applications/Skim.app/\
 Contents/SharedSupport/displayline %n %o %b")
-                      ("HTML Viewer" "open %o"))))
+                       ("HTML Viewer" "open %o"))
+                ))
             (TeX-fold-mode t)
             (TeX-source-correlate-mode t)))
 
@@ -167,7 +168,7 @@ Contents/SharedSupport/displayline %n %o %b")
 
 ;; Color theme
 ;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-11"))
-(load-theme 'gruvbox-light-soft)
+(load-theme 'gruvbox-dark-hard)
 
 ;; always show line numbers
 (global-linum-mode t)
